@@ -6,7 +6,7 @@ public class PickUp : MonoBehaviour
 {
     public Transform holdSpot; //where spot when hold
     public LayerMask pickUpMask;
-    public Vector3 Direction { get; set ;}
+    public Vector3 Direction { get; set;} //for direction drop
     private GameObject itemHolding;
 
     // Update is called once per frame
@@ -25,7 +25,7 @@ public class PickUp : MonoBehaviour
 
             else
             {
-                Collider2D pickUpItem = Physics2D.OverlapCircle(transform.position + Direction, .1f, pickUpMask);
+                Collider2D pickUpItem = Physics2D.OverlapCircle(transform.position + Direction, .2f, pickUpMask);
                 if (pickUpItem)
                 {
                 itemHolding = pickUpItem.gameObject;

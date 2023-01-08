@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CCollect : MonoBehaviour
 {   
+
     private GameObject Chicken;
     private ScoreManager scoreManager;
     // Start is called before the first frame update
@@ -15,15 +16,14 @@ public class CCollect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
- //     Chicken = GameObject.FindWithTag ("Chicken");
+        Chicken = GameObject.FindGameObjectWithTag("Chicken");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        scoreManager.score += 1;
-        Chicken = GameObject.FindWithTag ("Chicken");
         if (collision.tag == "Chicken")
         {
+            scoreManager.score += 1f;
             Destroy(Chicken);
         }
     }

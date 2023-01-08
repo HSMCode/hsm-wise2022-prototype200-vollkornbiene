@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Chicken
   - Stall
+  - HoldSpot
   layers:
   - Default
   - TransparentFX
