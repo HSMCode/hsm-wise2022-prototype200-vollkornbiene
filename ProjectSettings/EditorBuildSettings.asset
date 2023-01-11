@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Radical Chicken Collection.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Lose.unity
+    guid: 7605a7efe87d9014099807ed9b49a1d6
+  - enabled: 1
+    path: Assets/Scenes/VictoryScreen.unity
+    guid: 31ad445f393a88d4d8595994607e069b
   m_configObjects: {}
