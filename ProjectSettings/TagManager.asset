@@ -3,7 +3,19 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Chicken
+  - Stall
+  - HoldSpot
+  - Chicken1
+  - Chicken2
+  - Chicken3
+  - Chicken4
+  - Chicken5
+  - Chicken6
+  - Chicken7
+  - Chicken8
+  - Chicken9
   layers:
   - Default
   - TransparentFX
@@ -11,7 +23,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - PickUp
   - 
   - 
   - 
@@ -40,4 +52,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 813962003
     locked: 0
