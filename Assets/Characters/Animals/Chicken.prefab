@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 2420742524841279627}
   - component: {fileID: 2988380643386785411}
   - component: {fileID: 2818824521719040821}
+  - component: {fileID: 847053067146826882}
+  - component: {fileID: 3048936329330067029}
   m_Layer: 6
   m_Name: Chicken
   m_TagString: Chicken
@@ -129,3 +131,39 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.14887547, y: 0.102370486}
   m_EdgeRadius: 0
+--- !u!114 &847053067146826882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4068842843952159876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62c2b60741fd8c64ca7804f0f296a6ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: {x: 0, y: 0, z: 0}
+  speed: 50
+  walking: 0
+--- !u!50 &3048936329330067029
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4068842843952159876}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
