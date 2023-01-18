@@ -15,11 +15,15 @@ public class CCollect : MonoBehaviour
     private GameObject Chicken7;
     private GameObject Chicken8;
     private GameObject Chicken9;
-    private ScoreManager scoreManager;
+
+    private TimerScoreManager scoreManager;
+
+    public float score = 1f;
+
     // Start is called before the first frame update
     void Start()
     {   
-        scoreManager = GameObject.Find("Canvas").GetComponent<ScoreManager>();
+        scoreManager = GameObject.Find("TimerScore").GetComponent<TimerScoreManager>();
     }
 
     // Update is called once per frame
@@ -41,61 +45,61 @@ public class CCollect : MonoBehaviour
     {
         if (collision.tag == "Chicken")
         {
-            scoreManager.score += 1f;
+            scoreManager.UpdateScore(score);
             Destroy(Chicken);
         }
 
         if (collision.tag == "Chicken1")
         {
-            scoreManager.score += 1f;
+            scoreManager.UpdateScore(score);
             Destroy(Chicken1);
         }
 
         if (collision.tag == "Chicken2")
         {
-            scoreManager.score += 1f;
+            scoreManager.UpdateScore(score);
             Destroy(Chicken2);
         }
 
         if (collision.tag == "Chicken3")
         {
-            scoreManager.score += 1f;
+            scoreManager.UpdateScore(score);
             Destroy(Chicken3);
         }
 
         if (collision.tag == "Chicken4")
         {
-            scoreManager.score += 1f;
+            scoreManager.UpdateScore(score);
             Destroy(Chicken4);
         }
 
         if (collision.tag == "Chicken5")
         {
-            scoreManager.score += 1f;
+            scoreManager.UpdateScore(score);
             Destroy(Chicken5);
         }
 
         if (collision.tag == "Chicken6")
         {
-            scoreManager.score += 1f;
+            scoreManager.UpdateScore(score);
             Destroy(Chicken6);
         }
 
         if (collision.tag == "Chicken7")
         {
-            scoreManager.score += 1f;
+            scoreManager.UpdateScore(score);
             Destroy(Chicken7);
         }
 
         if (collision.tag == "Chicken8")
         {
-            scoreManager.score += 1f;
+           scoreManager.UpdateScore(score);
             Destroy(Chicken8);
         }
 
         if (collision.tag == "Chicken9")
         {
-            scoreManager.score += 1f;
+            scoreManager.UpdateScore(score);
             Destroy(Chicken9);
         }
     }
