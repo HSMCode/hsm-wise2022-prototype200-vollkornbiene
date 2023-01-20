@@ -14,7 +14,9 @@ public class PlayerController : MonoBehaviour
     SpriteRenderer spriteRenderer;
     Rigidbody2D rb; 
     Animator animator;
-    // AudioSource audio;
+    AudioSource audioSource;
+
+    public AudioClip Footsteps;
 
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
 
@@ -26,7 +28,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent <Rigidbody2D> ();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        // audio = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void FixedUpdate() // Checking if moving
@@ -51,14 +53,14 @@ public class PlayerController : MonoBehaviour
                 
             animator.SetBool("IsMoving", success);
 
-                // audio.Play();
+                audioSource.Play();
         } 
 
         else 
         {
             animator.SetBool("IsMoving", false);
 
-                // audio.Stop();
+                audioSource.Stop();
         }
 
         // Set direction of sprite to movement direction

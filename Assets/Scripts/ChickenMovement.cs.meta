@@ -3,7 +3,8 @@ guid: 62c2b60741fd8c64ca7804f0f296a6ce
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - ChickenClucking: {fileID: 8300000, guid: 9beabcf496de9664890a176dce053e34, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
