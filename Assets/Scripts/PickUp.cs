@@ -9,11 +9,21 @@ public class PickUp : MonoBehaviour
     public Vector3 Direction { get; set;} //for direction drop
     private GameObject itemHolding;
 
+    AudioSource audioSource;
+    public AudioClip PickUpSound;
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E)) // E to PickUp
         {
+            audioSource.PlayOneShot(PickUpSound);
+
             if(itemHolding) //Check if Item is holding
             {
                 itemHolding.transform.position = transform.position + Direction; //to locate where to drop the item
