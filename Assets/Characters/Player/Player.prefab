@@ -215,6 +215,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  Footsteps: {fileID: 0}
 --- !u!114 &5298022641581338601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,6 +232,7 @@ MonoBehaviour:
   pickUpMask:
     serializedVersion: 2
     m_Bits: 64
+  PickUpSound: {fileID: 8300000, guid: ea826e8195933e448800f1da48f8257f, type: 3}
 --- !u!82 &4765546924550241248
 AudioSource:
   m_ObjectHideFlags: 0

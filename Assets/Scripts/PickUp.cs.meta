@@ -5,7 +5,7 @@ MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - holdSpot: {instanceID: 0}
-  - PickUpSound: {fileID: 8300000, guid: da94eb8f00915554b90dccec7b8590b5, type: 3}
+  - PickUpSound: {fileID: 8300000, guid: ea826e8195933e448800f1da48f8257f, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
