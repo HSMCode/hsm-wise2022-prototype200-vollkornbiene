@@ -9,10 +9,14 @@ public class ChickenMovement : MonoBehaviour
     public float speed;
     public bool walking;
     private Rigidbody2D _chickenrb;
+
+    AudioSource audioSource;
+    public AudioClip ChickenClucking;
     
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         _chickenrb = GetComponent<Rigidbody2D>();
 
         InvokeRepeating ("NewDirection", 3f, 3f); //repeat NewDirection every 3 seconds
@@ -25,6 +29,7 @@ public class ChickenMovement : MonoBehaviour
         if(walking)
         {
             _chickenrb.AddForce(direction * speed, ForceMode2D.Force);
+            // audioSource.PlayOneShot(ChickenClucking, 0.2f);
             walking = false;
         }
         

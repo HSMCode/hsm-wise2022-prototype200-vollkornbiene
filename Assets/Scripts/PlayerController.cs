@@ -14,24 +14,20 @@ public class PlayerController : MonoBehaviour
     SpriteRenderer spriteRenderer;
     Rigidbody2D rb; 
     Animator animator;
+    // AudioSource audio;
 
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
 
     bool canMove = true;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent <Rigidbody2D> ();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        // audio = GetComponent<AudioSource>();
     }
-
-    // Update is called once per frame
-    //void Update()
-    //{
-
-    //}
-
 
     private void FixedUpdate() // Checking if moving
     {
@@ -53,12 +49,17 @@ public class PlayerController : MonoBehaviour
                 }
         
                 
-    animator.SetBool("IsMoving", success);
-            } 
-            else 
-            {
-    animator.SetBool("IsMoving", false);
-            }
+            animator.SetBool("IsMoving", success);
+
+                // audio.Play();
+        } 
+
+        else 
+        {
+            animator.SetBool("IsMoving", false);
+
+                // audio.Stop();
+        }
 
         // Set direction of sprite to movement direction
     if(movementInput.x < 0) 

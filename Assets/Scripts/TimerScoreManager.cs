@@ -48,7 +48,7 @@ public class TimerScoreManager : MonoBehaviour
     public void GameOver()
     {
         // Game Won
-        if (currentScore == 8f)
+        if (currentScore >= 8f)
         {
             SceneManager.LoadScene("VictoryScreen");
         }
