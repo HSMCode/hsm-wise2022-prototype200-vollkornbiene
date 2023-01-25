@@ -16,15 +16,6 @@ public class GameManager : MonoBehaviour
         demoButton.onClick.AddListener(StartDemo);
     }
 
-    // Update is called once per frame
-    //void Update()
-    //{
-    //    if (Input.GetKeyDown(KeyCode.R)) // 
-    //    {
-    //    SceneManager.LoadScene("Radical Chicken Collection"); 
-    //    }
-    //}
-
     void StartGame()
     {
         SceneManager.LoadScene("Radical Chicken Collection");

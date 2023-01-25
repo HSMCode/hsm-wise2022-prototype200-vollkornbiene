@@ -12,31 +12,41 @@ public class TimerScoreManager : MonoBehaviour
     // for timer
     private float timer = 160f;
     public TMP_Text timerSeconds;
+    private bool counting = true;
 
     // for score
     public float score;
     public float currentScore;
+    public float winScore = 8f;
     public TMP_Text textScore;
 
     // Start is called before the first frame update
     void Start()
     {
         timerSeconds = GameObject.Find("TimerText").GetComponent<TMP_Text>();
-        textScore = GameObject.Find("ScoreText").GetComponent<TMP_Text>();
+        textScore = GameObject.FindWithTag("ScoreText").GetComponent<TMP_Text>();
     }
 
     // Update is called once per frame
     void Update()
     {
         // timer
-        timer -= Time.deltaTime;
-        timerSeconds.text = timer.ToString("f2");
-
-        // Game Over
-        if (timer <= 0 || currentScore == 10f)
+        if (counting)
         {
+            timer -= Time.deltaTime;
+            timerSeconds.text = timer.ToString("f2");
+        }
+        
+        // Game Over
+        if (timer <= 0 || currentScore == winScore)
+        {
+            counting = false;
+
             GameOver();
         }
+
+        // for game over screen dont destroy score and timer
+        DontDestroyOnLoad(this.gameObject);
     }
 
     public void UpdateScore(float score)
@@ -47,16 +57,27 @@ public class TimerScoreManager : MonoBehaviour
 
     public void GameOver()
     {
+        
         // Game Won
-        if (currentScore >= 8f)
+        if (currentScore >= winScore)
         {
-            SceneManager.LoadScene("VictoryScreen");
+            SceneManager.LoadScene("Win");
+
+            timerSeconds = GameObject.Find("TimerText").GetComponent<TMP_Text>();
+            textScore = GameObject.FindWithTag("ScoreText").GetComponent<TMP_Text>();
+
+            textScore.text = "Chickens collected: " + currentScore + "/10".ToString();
+            timerSeconds.text = "Time remaining: " + timer.ToString();
         }
 
         // Game Lost
-        if (currentScore < 8f)
+        if (currentScore < winScore)
         {
             SceneManager.LoadScene("Lose");
+
+            textScore = GameObject.FindWithTag("ScoreText").GetComponent<TMP_Text>();
+
+            textScore.text = "Chickens collected: " + currentScore + "/10".ToString();
         }
     }
 

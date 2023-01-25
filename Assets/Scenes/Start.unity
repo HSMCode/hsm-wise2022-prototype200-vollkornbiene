@@ -814,6 +814,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1920, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &498812097 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6874832431668515174, guid: 5a5d336b4c545574692ba60510a5a557, type: 3}
+  m_PrefabInstance: {fileID: 6874832431651881804}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &541671336
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1039,7 +1044,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 799416337}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 498812097}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &799416337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1351,7 +1368,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1958154818}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 498812097}
+        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1958154818
 MonoBehaviour:
   m_ObjectHideFlags: 0

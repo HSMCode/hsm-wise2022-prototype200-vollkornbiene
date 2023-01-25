@@ -16,6 +16,8 @@ TagManager:
   - Chicken7
   - Chicken8
   - Chicken9
+  - ScoreText
+  - TimerText
   layers:
   - Default
   - TransparentFX
