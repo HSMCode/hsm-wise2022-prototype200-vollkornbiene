@@ -42,7 +42,7 @@ public class TimerScoreManager : MonoBehaviour
     public void UpdateScore(float score)
     {
         currentScore += score;
-        textScore.text = "Chickens collected: " + currentScore.ToString();
+        textScore.text = "Chickens collected: " + currentScore + "/10".ToString();
     }
 
     public void GameOver()

@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: {x: 0, y: 0, z: 0}
-  speed: 50
+  speed: 30
   walking: 0
   ChickenClucking: {fileID: 8300000, guid: 616382dbb3028294cbeb846356a6f5a9, type: 3}
 --- !u!50 &3048936329330067029
