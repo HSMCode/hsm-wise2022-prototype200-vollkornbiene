@@ -389,7 +389,7 @@ MonoBehaviour:
   pickUpMask:
     serializedVersion: 2
     m_Bits: 64
-  PickUpSound: {fileID: 8300000, guid: ea826e8195933e448800f1da48f8257f, type: 3}
+  pickUpSound: {fileID: 8300000, guid: ea826e8195933e448800f1da48f8257f, type: 3}
 --- !u!82 &4598736322479513577
 AudioSource:
   m_ObjectHideFlags: 0

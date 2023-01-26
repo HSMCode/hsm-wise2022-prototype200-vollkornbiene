@@ -11,7 +11,7 @@ public class ChickenMovement : MonoBehaviour
     private Rigidbody2D _chickenrb;
 
     AudioSource audioSource;
-    public AudioClip ChickenClucking;
+    public AudioClip chickenClucking;
     
 
     void Start()
@@ -29,7 +29,9 @@ public class ChickenMovement : MonoBehaviour
         if(walking)
         {
             _chickenrb.AddForce(direction * speed, ForceMode2D.Force);
-            // audioSource.PlayOneShot(ChickenClucking, 0.2f);
+
+            // audioSource.PlayOneShot(chickenClucking, 0.2f);
+
             walking = false;
         }
         

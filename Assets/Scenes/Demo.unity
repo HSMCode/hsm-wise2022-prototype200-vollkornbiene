@@ -19847,7 +19847,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61b0da1202546e54fba7ef90249a2da5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChickenScream: {fileID: 8300000, guid: 63bd570c8dae29a449a70eb3d2f8b243, type: 3}
+  chickenScream: {fileID: 8300000, guid: 63bd570c8dae29a449a70eb3d2f8b243, type: 3}
 --- !u!61 &1810614003
 BoxCollider2D:
   m_ObjectHideFlags: 0

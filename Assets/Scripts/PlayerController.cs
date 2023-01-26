@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     Animator animator;
     AudioSource audioSourceWalking;
 
-    public AudioClip Footsteps;
+    [SerializeField] AudioClip Footsteps;
 
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
 

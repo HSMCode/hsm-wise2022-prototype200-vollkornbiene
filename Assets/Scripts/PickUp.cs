@@ -10,7 +10,7 @@ public class PickUp : MonoBehaviour
     private GameObject itemHolding;
 
     AudioSource audioSource;
-    public AudioClip PickUpSound;
+    [SerializeField] AudioClip pickUpSound;
 
     void Start()
     {
@@ -22,7 +22,7 @@ public class PickUp : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E)) // E to PickUp
         {
-            audioSource.PlayOneShot(PickUpSound);
+            audioSource.PlayOneShot(pickUpSound);
 
             if(itemHolding) //Check if Item is holding
             {

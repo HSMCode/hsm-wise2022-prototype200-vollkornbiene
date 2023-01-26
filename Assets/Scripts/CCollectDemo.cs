@@ -7,7 +7,7 @@ public class CCollectDemo : MonoBehaviour
     private GameObject Chicken1;
 
     AudioSource audioSource;
-    public AudioClip ChickenScream;
+    [SerializeField] AudioClip chickenScream;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +26,7 @@ public class CCollectDemo : MonoBehaviour
         if (collision.tag == "Chicken1")
         {
             Destroy(Chicken1);
-            audioSource.PlayOneShot(ChickenScream, 0.2f);
+            audioSource.PlayOneShot(chickenScream, 0.2f);
         }
     }
 }
