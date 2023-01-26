@@ -3,7 +3,8 @@ guid: 61b0da1202546e54fba7ef90249a2da5
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - ChickenScream: {fileID: 8300000, guid: 63bd570c8dae29a449a70eb3d2f8b243, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

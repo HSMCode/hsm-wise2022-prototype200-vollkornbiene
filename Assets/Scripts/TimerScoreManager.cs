@@ -38,7 +38,7 @@ public class TimerScoreManager : MonoBehaviour
         }
         
         // Game Over
-        if (timer <= 0 || currentScore == winScore)
+        if (timer <= 0 || currentScore == 10f)
         {
             counting = false;
 
