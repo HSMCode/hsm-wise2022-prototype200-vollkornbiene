@@ -5,13 +5,13 @@ using UnityEngine;
 public class ChickenMovement : MonoBehaviour
 {
     
-    public Vector3 direction;
-    public float speed;
-    public bool walking;
+    private Vector3 direction;
+    private float speed = 30f;
+    private bool walking;
     private Rigidbody2D _chickenrb;
 
     AudioSource audioSource;
-    public AudioClip chickenClucking;
+    [SerializeField] AudioClip chickenClucking;
     
 
     void Start()

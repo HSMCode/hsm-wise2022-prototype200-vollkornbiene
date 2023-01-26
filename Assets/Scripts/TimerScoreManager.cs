@@ -7,18 +7,18 @@ using UnityEngine.SceneManagement;
 
 public class TimerScoreManager : MonoBehaviour
 {
-    public string LevelToLoad;
+    private string LevelToLoad;
 
     // for timer
     private float timer = 160f;
-    public TMP_Text timerSeconds;
+    private TMP_Text timerSeconds;
     private bool counting = true;
 
     // for score
     public float score;
-    public float currentScore;
-    public float winScore = 8f;
-    public TMP_Text textScore;
+    private float currentScore;
+    private float winScore = 8f;
+    private TMP_Text textScore;
 
     // Start is called before the first frame update
     void Start()

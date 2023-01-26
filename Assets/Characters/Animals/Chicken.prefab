@@ -144,10 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c2b60741fd8c64ca7804f0f296a6ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  direction: {x: 0, y: 0, z: 0}
-  speed: 30
-  walking: 0
-  ChickenClucking: {fileID: 8300000, guid: 616382dbb3028294cbeb846356a6f5a9, type: 3}
+  chickenClucking: {fileID: 8300000, guid: 9beabcf496de9664890a176dce053e34, type: 3}
 --- !u!50 &3048936329330067029
 Rigidbody2D:
   serializedVersion: 4
@@ -179,7 +176,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 616382dbb3028294cbeb846356a6f5a9, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 9beabcf496de9664890a176dce053e34, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

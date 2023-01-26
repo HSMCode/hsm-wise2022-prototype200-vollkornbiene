@@ -6,9 +6,9 @@ using UnityEngine.InputSystem; // need Input System from the Unity Registry -> W
 public class PlayerController : MonoBehaviour
 {
 
-    public float moveSpeed = 1f;
-    public float collisionOffset = 0.05f;
-    public ContactFilter2D movementFilter;
+    private float moveSpeed = 1f;
+    private float collisionOffset = 0.05f;
+    private ContactFilter2D movementFilter;
 
     Vector2 movementInput;
     SpriteRenderer spriteRenderer;
@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
 
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
 
-    bool canMove = true;
+    private bool canMove = true;
 
     // Start is called before the first frame update
     void Start()

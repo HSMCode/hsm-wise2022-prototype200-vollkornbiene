@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class PickUp : MonoBehaviour
 {
-    public Transform holdSpot; //where spot when hold
+    private Transform holdSpot; //where spot when hold
     public LayerMask pickUpMask;
-    public Vector3 Direction { get; set;} //for direction drop
+    private Vector3 Direction { get; set;} //for direction drop
     private GameObject itemHolding;
 
     AudioSource audioSource;
@@ -14,6 +14,7 @@ public class PickUp : MonoBehaviour
 
     void Start()
     {
+        holdSpot = GameObject.FindWithTag("HoldSpot").GetComponent<Transform>();
         audioSource = GetComponent<AudioSource>();
     }
 

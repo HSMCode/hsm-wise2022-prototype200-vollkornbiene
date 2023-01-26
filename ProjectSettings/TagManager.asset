@@ -18,6 +18,9 @@ TagManager:
   - Chicken9
   - ScoreText
   - TimerText
+  - DemoButton
+  - StartGameButton
+  - QuitButton
   layers:
   - Default
   - TransparentFX

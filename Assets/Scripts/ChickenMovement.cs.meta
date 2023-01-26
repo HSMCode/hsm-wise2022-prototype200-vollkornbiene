@@ -4,7 +4,7 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - ChickenClucking: {fileID: 8300000, guid: 9beabcf496de9664890a176dce053e34, type: 3}
+  - chickenClucking: {fileID: 8300000, guid: 9beabcf496de9664890a176dce053e34, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

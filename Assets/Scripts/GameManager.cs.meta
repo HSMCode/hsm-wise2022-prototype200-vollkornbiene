@@ -3,7 +3,10 @@ guid: 6a8756879a2f24c4fb614ed11e05f8f1
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - startButton: {fileID: 368641602214945268, guid: 849393947987f7f45abef74154634672, type: 3}
+  - demoButton: {fileID: 5691995214580636450, guid: 96973ed70a91b7448973d37ee99939bb, type: 3}
+  - quitButton: {fileID: 429904225970010173, guid: 9d14737d3995f1249ba2420f509baae1, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
