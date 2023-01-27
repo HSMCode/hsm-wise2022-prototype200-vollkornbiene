@@ -35,47 +35,48 @@ public class PlayerController : MonoBehaviour
     {
         if(canMove) 
         {
-        // If movement input is not 0, try to move
-        if(movementInput != Vector2.zero){
+            // If movement input is not 0, try to move
+            if (movementInput != Vector2.zero)
+            {
+                bool success = TryMove(movementInput);
+
+                    if(!success) 
+                    {
+                        success = TryMove(new Vector2(movementInput.x, 0));
+                    }
+
+                    if(!success) 
+                    {
+                        success = TryMove(new Vector2(0, movementInput.y));
+                    }
                 
-            bool success = TryMove(movementInput);
-
-                if(!success) 
-                {
-                    success = TryMove(new Vector2(movementInput.x, 0));
-                }
-
-                if(!success) 
-                {
-                    success = TryMove(new Vector2(0, movementInput.y));
-                }
-        
-                
-            animator.SetBool("IsMoving", success);
-
+                animator.SetBool("IsMoving", success);
                 audioSourceWalking.enabled = true;
-        } 
 
-        else 
-        {
-            animator.SetBool("IsMoving", false);
+            }
 
+            else 
+            {
+                animator.SetBool("IsMoving", false);
                 audioSourceWalking.enabled = false;
+            }
+
+            // Set direction of sprite to movement direction
+            if(movementInput.x < 0) 
+            {
+                spriteRenderer.flipX = true;
+            } 
+
+            else if (movementInput.x > 0) 
+            {
+                spriteRenderer.flipX = false;
+            }
         }
 
-        // Set direction of sprite to movement direction
-    if(movementInput.x < 0) 
-    {
-        spriteRenderer.flipX = true;
-    } 
-    else if (movementInput.x > 0) 
-    {
-        spriteRenderer.flipX = false;
-    }
-        }
 }
 
-    private bool TryMove(Vector2 direction) {
+    private bool TryMove(Vector2 direction) 
+    {
         if(direction != Vector2.zero) 
         {
             // Check for potential collisions
@@ -89,7 +90,9 @@ public class PlayerController : MonoBehaviour
             {
                 rb.MovePosition(rb.position + direction * moveSpeed * Time.fixedDeltaTime);
                 return true;
-            } else 
+            } 
+            
+            else 
             {
                 return false;
             }
@@ -99,18 +102,21 @@ public class PlayerController : MonoBehaviour
             // Can't move if there's no direction to move in
             return false;
         }
-        
     }
 
-    void OnMove(InputValue movementValue) {
+    void OnMove(InputValue movementValue) 
+    {
         movementInput = movementValue.Get<Vector2>();
     }
 
-    public void LockMovement() {
+    public void LockMovement()
+    {
         canMove = false;
+        audioSourceWalking.enabled = false;
     }
 
-    public void UnlockMovement() {
+    public void UnlockMovement()
+    {
         canMove = true;
     }
 }

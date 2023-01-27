@@ -25,6 +25,7 @@ public class TimerScoreManager : MonoBehaviour
     {
         timerSeconds = GameObject.Find("TimerText").GetComponent<TMP_Text>();
         textScore = GameObject.FindWithTag("ScoreText").GetComponent<TMP_Text>();
+        DontDestroyOnLoad(this.gameObject);
     }
 
     // Update is called once per frame
@@ -44,9 +45,6 @@ public class TimerScoreManager : MonoBehaviour
 
             GameOver();
         }
-
-        // for game over screen dont destroy score and timer
-        DontDestroyOnLoad(this.gameObject);
     }
 
     public void UpdateScore(float score)

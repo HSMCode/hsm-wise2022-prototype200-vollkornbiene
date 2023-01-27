@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 5691995214580636450}
   m_Layer: 5
   m_Name: ButtonDemo
-  m_TagString: DemoButton
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -254,16 +254,4 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5691995214580636449}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6874832431668515174, guid: 5a5d336b4c545574692ba60510a5a557, type: 3}
-        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
