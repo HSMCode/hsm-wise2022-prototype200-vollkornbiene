@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 429904225970010173}
   m_Layer: 5
   m_Name: ButtonQuit
-  m_TagString: Untagged
+  m_TagString: QuitButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

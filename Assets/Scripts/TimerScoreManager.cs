@@ -10,7 +10,7 @@ public class TimerScoreManager : MonoBehaviour
     private string LevelToLoad;
 
     // for timer
-    private float timer = 160f;
+    private float timer = 10f;
     private TMP_Text timerSeconds;
     private bool counting = true;
 
@@ -20,12 +20,28 @@ public class TimerScoreManager : MonoBehaviour
     private float winScore = 8f;
     private TMP_Text textScore;
 
+    // for game over
+    private GameObject gameOverCanvas;
+    private GameObject loseText;
+    private GameObject winText;
+
+    private GameObject player;
+    private GameObject stall;
+
     // Start is called before the first frame update
     void Start()
     {
         timerSeconds = GameObject.Find("TimerText").GetComponent<TMP_Text>();
         textScore = GameObject.FindWithTag("ScoreText").GetComponent<TMP_Text>();
-        DontDestroyOnLoad(this.gameObject);
+
+        gameOverCanvas = GameObject.Find("GameOverCanvas");
+        loseText = GameObject.Find("LoseText");
+        winText = GameObject.Find("WinText");
+
+        player = GameObject.FindWithTag("Player");
+        stall = GameObject.FindWithTag("Stall");
+
+        gameOverCanvas.SetActive(false);
     }
 
     // Update is called once per frame
@@ -55,28 +71,22 @@ public class TimerScoreManager : MonoBehaviour
 
     public void GameOver()
     {
-        
+        gameOverCanvas.SetActive(true);
+        player.GetComponent<PlayerController>().enabled = false;
+        stall.GetComponent<CCollect>().enabled = false;
+
         // Game Won
         if (currentScore >= winScore)
         {
-            SceneManager.LoadScene("Win");
-
-            timerSeconds = GameObject.Find("TimerText").GetComponent<TMP_Text>();
-            textScore = GameObject.FindWithTag("ScoreText").GetComponent<TMP_Text>();
-
-            textScore.text = "Chickens collected: " + currentScore + "/10".ToString();
-            timerSeconds.text = "Time remaining: " + timer.ToString();
+            loseText.SetActive(false);
+            winText.SetActive(true);
         }
 
         // Game Lost
         if (currentScore < winScore)
         {
-            SceneManager.LoadScene("Lose");
-
-            textScore = GameObject.FindWithTag("ScoreText").GetComponent<TMP_Text>();
-
-            textScore.text = "Chickens collected: " + currentScore + "/10".ToString();
+            loseText.SetActive(true);
+            winText.SetActive(false);
         }
     }
-
 }
