@@ -10,7 +10,7 @@ public class TimerScoreManager : MonoBehaviour
     private string LevelToLoad;
 
     // for timer
-    private float timer = 10f;
+    private float timer = 160f;
     private TMP_Text timerSeconds;
     private bool counting = true;
 
