@@ -21,6 +21,7 @@ TagManager:
   - StartGameButton
   - QuitButton
   - Music
+  - DemoButton
   layers:
   - Default
   - TransparentFX

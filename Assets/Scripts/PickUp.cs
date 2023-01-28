@@ -46,7 +46,6 @@ public class PickUp : MonoBehaviour
                     itemHolding.GetComponent<Rigidbody2D>().simulated = false;
                 }
             }
-
         }
     }
 }

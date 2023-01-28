@@ -6,11 +6,14 @@ using UnityEngine.UI;
 
 public class GameManagerStart : MonoBehaviour
 {
-    public Button startButton;
-    public Button demoButton;
+    private Button startButton;
+    private Button demoButton;
 
     void Start()
     {
+        startButton = GameObject.FindWithTag("StartGameButton").GetComponent<Button>();
+        demoButton = GameObject.FindWithTag("DemoButton").GetComponent<Button>();
+
         startButton.onClick.AddListener(StartGame);
         demoButton.onClick.AddListener(StartDemo);
     }
